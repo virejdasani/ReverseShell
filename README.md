@@ -59,3 +59,15 @@ get-process
 ```
 stop-process -processname explorer
 ```
+
+- Open file hacked.txt. Automatically open in default app
+
+```
+start hacked.txt
+```
+
+- Open URl. Opens in default browser
+
+```
+start https://google.com/
+```
